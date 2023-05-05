@@ -1,0 +1,20 @@
+'''Para adicionar um ícone ao arquivo Python em seu repositório do Github, você precisa adicionar um arquivo de ícone (.ico) ao seu projeto e referenciá-lo no código. Aqui estão os passos que você pode seguir:
+
+Adicione um arquivo de ícone ao seu projeto. Você pode usar uma ferramenta online para criar um ícone personalizado ou baixar um arquivo de ícone pronto.
+
+Renomeie o arquivo de ícone para "icon.ico" e adicione-o à pasta raiz do seu projeto no Github.
+
+Abra seu código Python e adicione o seguinte código no início do arquivo: '''
+
+import ctypes
+
+# Define o caminho para o arquivo de ícone
+icon_path = 'icon.ico'
+
+# Define o ícone da janela
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
+ctypes.windll.user32.SetWindowIcon(ctypes.windll.kernel32.GetConsoleWindow(), 0, icon_path)
+'''
+Certifique-se de substituir 'myappid' pelo nome do aplicativo que deseja usar.
+
+Faça o push das mudanças no seu repositório do Github.'''
